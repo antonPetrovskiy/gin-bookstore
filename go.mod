@@ -1,4 +1,4 @@
-module github.com/rahmanfadhil/gin-bookstore
+module github.com/RazorEdgexD/gin-bookstore
 
 go 1.14
 

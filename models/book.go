@@ -2,6 +2,6 @@ package models
 
 type Book struct {
 	ID     uint   `json:"id" gorm:"primary_key"`
-	Title  string `json:"title"`
+	Score  uint `json:"score"`
 	Author string `json:"author"`
 }

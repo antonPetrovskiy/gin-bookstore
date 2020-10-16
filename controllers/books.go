@@ -11,6 +11,7 @@ import (
 type CreateBookInput struct {
 	Score  uint `json:"score" binding:"required"`
 	Author string `json:"author" binding:"required"`
+	Nick string `json:"nick" binding:"required"`
 }
 
 type UpdateBookInput struct {
@@ -77,7 +78,7 @@ func CreateBook(c *gin.Context) {
 	}
 
 	// Create book
-	book := models.Book{Score: input.Score, Author: input.Author}
+	book := models.Book{Score: input.Score, Author: input.Author, Nick: input.Nick}
 	models.DB.Create(&book)
 
 	c.JSON(http.StatusOK, gin.H{"data": book})

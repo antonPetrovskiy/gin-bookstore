@@ -17,6 +17,7 @@ type CreateBookInput struct {
 type UpdateBookInput struct {
 	Score  uint `json:"score"`
 	Author string `json:"author"`
+	Nick string `json:"nick"`
 }
 
 // GET /leaderbordAll
